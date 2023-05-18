@@ -1,19 +1,7 @@
-FROM maven:3-jdk-11-alpine AS build
+FROM openjdk:11-jdk-slim
 
+WORKDIR /app
 
-# Build Stage
-WORKDIR /opt/app
+COPY target/my-spring-boot-app.jar .
 
-COPY ./ /opt/app
-RUN mvn clean install -DskipTests
-
-
-# Docker Build Stage
-FROM openjdk:11-jdk-alpine
-
-COPY --from=build /opt/app/target/*.jar app.jar
-
-ENV PORT 8080
-EXPOSE $PORT
-
-ENTRYPOINT ["java","-jar","-Xmx1024M","-Dserver.port=${PORT}","app.jar"]
+CMD ["java", "-jar", "my-spring-boot-app.jar"]
