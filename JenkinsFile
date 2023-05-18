@@ -10,7 +10,7 @@ pipeline {
 
     stage('Run') {
       steps {
-        bat 'docker run -d -p 9000:8080 my-spring-boot-app:latest'
+        bat 'docker run -d -p 9002:8080 my-spring-boot-app:latest'
       }
     }
   }
