@@ -1,0 +1,6 @@
+insert into Alien values(123,'hey','Python')
+insert into Alien values(323,'atal','java')
+insert into Alien values(189,'ananya','react')
+insert into Alien values(103,'anta','javascript')
+insert into Alien values(623,'ane','Python')
+insert into Mercury values('Venus',900)

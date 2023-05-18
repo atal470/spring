@@ -1,0 +1,5 @@
+com\SocialMediaAnalystics\demo\controller\HomeController.class
+com\SocialMediaAnalystics\demo\repository\AlienRepo.class
+com\SocialMediaAnalystics\demo\model\Mercury.class
+com\SocialMediaAnalystics\demo\SocialMediaAnalysticsApplication.class
+com\SocialMediaAnalystics\demo\model\Alien.class
