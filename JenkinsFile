@@ -13,5 +13,12 @@ pipeline {
         bat 'docker run -d -p 9002:8080 my-spring-boot-app:latest'
       }
     }
+    stage('Deploy to k8s'){
+            steps{
+                script{
+                    kubernetesDeploy (configs: 'deploymentservice.yaml',kubeconfigId: 'k8sconfigpwd')
+            }
+         }
+     }
   }
 }
